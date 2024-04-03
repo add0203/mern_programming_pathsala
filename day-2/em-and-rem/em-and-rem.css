@@ -1,0 +1,29 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+/* .parent {
+  box-sizing: border-box;
+  font-size: 32px;
+  .child {
+    color: red;
+    font-size: 16px;
+  }
+} */
+
+html {
+  font-size: 30px;
+}
+
+.parent {
+  box-sizing: border-box;
+  font-size: 32px;
+  .child {
+    color: red;
+    background-color: grey;
+    font-size: 1.5em;
+    /* width: 2em; */ /*{1.5*32*2} */
+    width: 20rem; /* {2*html-widht(16px by default)} */
+  }
+}

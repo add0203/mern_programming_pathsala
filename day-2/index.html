@@ -3,9 +3,27 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="./index.css" />
+    <style>
+      * {
+        font-size: x-large;
+      }
+      div {
+        color: black;
+      }
+      #heading-one {
+        color: red;
+      }
+      .heading-two {
+        color: grey;
+      }
+      .heading-two.big-text {
+        font-size: 50px;
+      }
+    </style>
   </head>
   <body>
-    <div
+    <!-- <div
       style="
         color: blue;
         background-color: green;
@@ -15,5 +33,39 @@
     >
       content
     </div>
+
+    <div id="heading-one">content</div>
+    <div class="heading-two big-text">content</div> -->
+
+    <!-- <div class="parent-1">
+      parent
+
+      <div class="parent-1-child">child</div>
+      <span class="parent-1-child">child</span>
+      <span class="parent-1-child">child</span>
+    </div> -->
+    <!-- <div class="parent-2"> -->
+    <!-- parent -->
+    <!-- <p class="parent-2-child">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere soluta
+        repellendus modi aliquam unde quam tempora consequatur cum aspernatur
+        quo Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        Necessitatibus porro ad voluptatibus accusamus culpa. Distinctio sint
+        totam nulla fuga facilis.
+      </p>
+    </div> -->
+    <div class="box-parent">
+      <div class="child">O</div>
+      <div class="child">O</div>
+      <div class="child">O</div>
+      <div class="child">O</div>
+    </div>
   </body>
 </html>
+
+<!-- naming of styling in CSS is 'kabbab-case' -->
+<!-- if you are targeting child elemnet needs to enter space between the 2 class (or id ) name {.class-one .class-one-child}, but if you are targeting the element 
+with 2 classes {.class-one.class-two}-->
+<!-- box model = padding border margin content -->
+<!-- psudo selctor https://www.freecodecamp.org/news/css-selectors-cheat-sheet-for-beginners/#:~:text=The%20first%20child%20selector%2C%20%3Afirst,child%20inside%20the%20parent%20container.&text=The%20last%20child%20selector%2C%20%3Alast,child%20inside%20the%20parent%20container. -->
+<!-- block elemnt does not accept width property -->
