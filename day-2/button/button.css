@@ -2,28 +2,27 @@
 
 .button-big {
   font-size: 3rem;
-  padding: 0.7rem;
+  padding: 0.7em;
   background-color: gray;
   width: 10em;
-  border-radius: 10px;
+  border-radius: 1em;
   text-align: center;
 }
 
 .button {
   font-size: 2rem;
-  padding: 0.7rem;
+  padding: 0.7em;
   background-color: gray;
-  /* width: 120px; */
   width: 10em;
-  border-radius: 10px;
+  border-radius: 1em;
   text-align: center;
 }
 
 .button-small {
   font-size: 1.5rem;
-  padding: 0.7rem;
-  text-align: center;
+  padding: 0.7em;
   background-color: gray;
-  width: 8em;
-  border-radius: 10px;
+  width: 10em;
+  border-radius: 1em;
+  text-align: center;
 }
