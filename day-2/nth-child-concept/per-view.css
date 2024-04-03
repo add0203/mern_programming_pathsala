@@ -1,0 +1,48 @@
+/* Targeting all elements */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: content-box;
+}
+
+/* Targeting the body element */
+body {
+  height: 100vh;
+  width: 100vw;
+  padding: 10px 32px;
+}
+
+/* Targeting the first child of each <ol> */
+ol li:first-child {
+  background-color: greenyellow;
+}
+
+/* Targeting the last child of each <ol> */
+ol li:last-child {
+  background-color: gray;
+}
+
+/* Targeting the second <li> of each <ol> */
+ol li:nth-of-type(2) {
+  background-color: yellow;
+}
+
+/* Targeting the second <ol> within .parent */
+.parent ol:nth-child(2) {
+  background-color: violet;
+}
+
+/* Targeting the fourth <li> within <ul> inside .parent */
+.parent ul li:nth-child(4) {
+  background-color: magenta;
+}
+
+/* Targeting the first <li> within the first <ul> inside .parent */
+.parent ul:nth-child(1) li:nth-child(1) {
+  background-color: peru;
+}
+
+/* Targeting the first <li> within the fourth <ol> */
+ol:nth-child(4) li:nth-child(1) {
+  background-color: coral;
+}

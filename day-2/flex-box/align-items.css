@@ -1,0 +1,80 @@
+/* Targeting all elements */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: content-box;
+}
+
+/* Targeting the body element */
+body {
+  height: 100vh;
+  /* width: 100vw;   */
+  padding: 10px 32px;
+}
+.parent-0,
+.parent-1,
+.parent-2,
+.parent-3,
+.parent-4,
+.parent-5,
+.parent-6,
+.parent-7 {
+  background-color: aqua;
+  display: flex;
+  /* make element wrap to next it wrap as screen get smaller */
+  flex-wrap: wrap;
+}
+
+.child {
+  background-color: blanchedalmond;
+  border: 1px solid red;
+  /* min-width: 100px; */
+  /* max-width: 200px; */
+  /* width: 30px; */
+  flex-basis: 40px;
+}
+
+.parent-0 {
+  height: 100px;
+}
+
+.parent-1 {
+  height: 100px;
+  align-items: center; /*by default*/
+  /* justify-content: center; */
+}
+
+.parent-2 {
+  height: 100px;
+  align-items: baseline;
+  /* justify-content: center; */
+}
+
+.parent-3 {
+  height: 100px;
+  align-items: end;
+  /* justify-content: center; */
+}
+
+.parent-4 {
+  height: 100px;
+  align-items: first baseline;
+  /* justify-content: center; */
+}
+
+.parent-5 {
+  height: 100px;
+  align-items: last baseline;
+  /* justify-content: center; */
+}
+
+.parent-6 {
+  height: 100px;
+  align-items: stretch;
+  /* justify-content: center; */
+}
+.parent-7 {
+  height: 100px;
+  /* align-items: inherit; */
+  /* justify-content: center; */
+}

@@ -1,0 +1,43 @@
+/* Targeting all elements */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: content-box;
+}
+
+/* Targeting the body element */
+body {
+  height: 100vh;
+  /* width: 100vw;   */
+  padding: 10px 32px;
+}
+
+.parent {
+  background-color: aqua;
+  display: flex;
+  /* make element wrap to next it wrap as screen get smaller */
+  flex-wrap: wrap;
+}
+
+.child {
+  background-color: blanchedalmond;
+  border: 1px solid red;
+  /* min-width: 100px; */
+  /* max-width: 200px; */
+  /* width: 30px; */
+  flex-basis: 40px;
+}
+
+.search-box {
+  /* taek al the left over place */
+  flex-grow: 1;
+}
+
+.location-box {
+  flex-grow: 3;
+}
+
+.logo-box {
+  /* doesn't make it shrink */
+  flex-shrink: 0;
+}
