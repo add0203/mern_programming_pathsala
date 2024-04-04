@@ -20,6 +20,7 @@ body {
 .parent-6 {
   background-color: aqua;
   display: flex;
+
   /* make element wrap to next it wrap as screen get smaller */
   flex-wrap: wrap;
 }

@@ -21,6 +21,7 @@ body {
 .parent-7 {
   background-color: aqua;
   display: flex;
+  /* flex-direction: ; */
   /* make element wrap to next it wrap as screen get smaller */
   flex-wrap: wrap;
 }
