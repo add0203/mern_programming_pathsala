@@ -1,0 +1,85 @@
+/* only change the font-size */
+
+.button-big {
+  font-size: 3rem;
+  padding: 0.7em;
+  background-color: gray;
+  width: 10em;
+  border-radius: 1em;
+  text-align: center;
+}
+
+.button {
+  font-size: 2rem;
+  padding: 0.7em;
+  background-color: gray;
+  width: 10em;
+  border-radius: 1em;
+  text-align: center;
+}
+
+.button-small {
+  font-size: 1.5rem;
+  padding: 0.7em;
+  background-color: gray;
+  width: 10em;
+  border-radius: 1em;
+  text-align: center;
+}
+
+/* .button-new {
+  font-size: 1.5rem;
+  padding: 0.7em;
+  background-color: greenyellow;
+  width: 10em;
+  border-radius: 1em;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.button-new:hover {
+  cursor: pointer;
+
+  background-color: green;
+  scale: 2;
+  //transition
+  transition-timing-function: ease-in-out;
+  transition-property: scale;
+  transition-duration: 1s;
+} */
+
+/* move bottom =code to animation file and uncommet aboce code for hover */
+.button-new {
+  scale: 1;
+  background-color: greenyellow;
+
+  text-align: center;
+  border: none;
+  /* cursor: pointer; */
+
+  position: absolute;
+  top: 20px;
+  left: 20px;
+
+  animation-name: button-animation-type-1;
+  animation-timing-function: linear;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes button-animation-type-1 {
+  from {
+    top: 20px;
+    left: 40px;
+  }
+  to {
+    top: 20px;
+    left: 400px;
+  }
+}

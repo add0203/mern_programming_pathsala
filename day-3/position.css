@@ -1,0 +1,48 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+.body {
+  min-height: 100vh;
+  min-width: 100vw;
+  background-color: green;
+}
+.parent {
+  width: 300px;
+  height: 300px;
+  background-color: peachpuff;
+  /* doesn't leave its old space affect by scrolling*/
+  position: relative;
+  top: 10px;
+}
+
+/* static: every element has a static position by default, so the element will stick to the normal page flow. So if there is a left/right/top/bottom/z-index set then there will be no effect on that element. */
+.logo {
+  height: 400px;
+  background-color: yellow;
+}
+
+/* absolute: the element is removed from the flow of the document and other elements will behave as if it’s not even there whilst all the other positional properties will work on it. */
+.parent-2 {
+  width: 300px;
+  height: 300px;
+  background-color: gray;
+  /* leave his previous space that he occupied affected by scrollin*/
+  position: absolute;
+  top: 100px;
+  left: 100px;
+}
+/* sticky: the element is treated like a relative value until the scroll location of the viewport reaches a specified threshold, at which point the element takes a fixed position where it is told to stick. */
+.parent-3 {
+  width: 200px;
+  height: 200px;
+  background-color: gray;
+  /* leave his previous space that he occupied affected by scrollin*/
+  position: sticky;
+  bottom: 20px;
+  right: 20px;
+}
+
+/* https://css-tricks.com/almanac/properties/p/position/ */

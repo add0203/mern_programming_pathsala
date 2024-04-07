@@ -20,3 +20,6 @@ body {
 .parent + .child + ul {
   background-color: darkcyan;
 }
+
+/* selector */
+/* https://www.freecodecamp.org/news/css-selectors-cheat-sheet-for-beginners/#:~:text=The%20first%20child%20selector%2C%20%3Afirst,child%20inside%20the%20parent%20container.&text=The%20last%20child%20selector%2C%20%3Alast,child%20inside%20the%20parent%20container. */
