@@ -39,10 +39,10 @@ const renderUI = (data) => {
     const p = document.createElement("p");
     p.innerText = art1.description;
 
+    root.appendChild(div);
     div.appendChild(h3);
     div.appendChild(img);
     div.appendChild(p);
-    root.appendChild(div);
   }
 };
 

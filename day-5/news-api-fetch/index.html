@@ -6,16 +6,30 @@
     <title>News Page</title>
     <style>
       /* CSS for news cards */
-      .rootmain,
+      /* .rootmain, */
       .newsclass {
         height: auto;
-        width: auto;
+        /* width: auto; */
         border: 1px solid #ccc;
         border-radius: 5px;
         padding: 10px;
         margin: 10px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         background-color: #fff;
+      }
+      .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr; /* Three equal columns */
+        grid-template-rows: auto; /* Auto rows */
+        gap: 10px; /* Gap between grid items */
+      }
+
+      /* Item styles */
+      .rootdiv {
+        background-color: #ccc;
+        padding: 20px;
+        border-radius: 5px;
+        text-align: center;
         img {
           height: 150px;
           width: auto;
@@ -27,12 +41,15 @@
     </style>
   </head>
   <body>
-    <header></header>
+    <!-- <header></header>
     <main class="rootmain">
       <h1>NEWS API DATA</h1>
       <div id="root" class="rootdiv"></div>
     </main>
-    <footer></footer>
+    <footer></footer> -->
+    <div class="container">
+      <div id="root" class="rootdiv"></div>
+    </div>
   </body>
   <script src="script.js"></script>
 </html>

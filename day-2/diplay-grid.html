@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid Layout Example</title>
+    <style>
+      /* Container styles */
+      .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr; /* Three equal columns */
+        grid-template-rows: auto; /* Auto rows */
+        gap: 10px; /* Gap between grid items */
+      }
+
+      /* Item styles */
+      .item {
+        background-color: #ccc;
+        padding: 20px;
+        border-radius: 5px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div id="root" class="">1</div>
+    </div>
+    <script src="../day-5/news-api-fetch/script.js"></script>
+  </body>
+</html>
