@@ -32,7 +32,9 @@
       input[type="text"],
       input[type="email"],
       input[type="number"],
-      input[type="checkbox"] {
+      input[type="checkbox"],
+      input[type="password"],
+      input[type="phone"] {
         width: calc(100% - 20px);
         padding: 8px;
         margin-bottom: 10px;
@@ -57,19 +59,66 @@
       input[type="submit"]:hover {
         background-color: #0056b3;
       }
+      .warr {
+        color: red;
+        text-transform: capitalize;
+        font-size: 10px;
+      }
     </style>
   </head>
   <body style="padding: 10px">
     <div class="form" style="margin: 10px">
-      <form action="" onsubmit="submitForm(event)">
+      <form action="" onsubmit="return submitForm(event) && validateForm()">
         <label for="firstName">First Name</label>
-        <input type="text" name="firstName" placeholder="firstName" /><br />
+        <input
+          id="name"
+          type="text"
+          name="firstName"
+          placeholder="firstName"
+          required
+        />
+        <span><b id="nameError" class="warr"></b></span><br />
         <label for="lastName">Last Name</label>
-        <input type="text" name="lastName" placeholder="lastName" /><br />
-        <label for="lastName">Mail</label>
-        <input type="email" name="mail" placeholder="mail" /><br />
+        <input
+          id="lastName"
+          type="text"
+          name="lastName"
+          placeholder="lastName"
+        />
+        <span> <b id="lastNameError" class="warr"></b> </span><br />
+        <label for="email">Mail</label>
+        <input
+          id="email"
+          type="email"
+          name="mail"
+          placeholder="mail"
+          required
+        />
+        <span> <b id="emailError" class="warr"></b> </span><br />
+        <label for="password">Password</label>
+        <input
+          id="password"
+          type="password"
+          name="password"
+          placeholder="password"
+          required
+        />
+        <span> <b id="passwordError" class="warr"></b> </span><br />
+        <label for="confirmPassword">Confirm Password</label>
+        <input
+          id="confirmPassword"
+          type="password"
+          name="confirmPassword"
+          placeholder="confirmPassword"
+        />
+        <span> <b id="confirmPasswordError" class="warr"></b> </span><br />
         <label for="age">age</label>
-        <input type="number" name="age" placeholder="age" /><br />
+        <input type="number" name="age" placeholder="age" />
+        <span> <b class="warr"></b> </span><br />
+        <label for="age">Phone Number</label>
+        <input type="phone" name="phone" placeholder="phone number" />
+        <span> <b class="warr"></b> </span><br />
+        <br />
 
         <label for=""> Hobbies </label><br />
         <input type="checkbox" name="hobbies" value="web" /><label for=""
