@@ -42,3 +42,20 @@ console.log("start");
 //   .then((res) => console.log(res));
 
 console.log("end");
+
+fetch("https://dummyjson.com/products/1")
+  .then((res) => res.json())
+  .then((res) => console.log(res))
+  .catch((err) => {
+    console.log(err);
+  });
+
+fetch("https://dummyjson.com/products/1")
+  .then((res) => res.json())
+  .catch((err) => {
+    console.log(err);
+  })
+  .then((res) => console.log(res))
+  .catch((err) => {
+    console.log(err);
+  });
