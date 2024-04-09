@@ -68,7 +68,7 @@
   </head>
   <body style="padding: 10px">
     <div class="form" style="margin: 10px">
-      <form action="" onsubmit="return submitForm(event) && validateForm()">
+      <form action="" onsubmit="return (submitForm(event) && validateForm())">
         <label for="firstName">First Name</label>
         <input
           id="name"
@@ -112,7 +112,7 @@
           placeholder="confirmPassword"
         />
         <span> <b id="confirmPasswordError" class="warr"></b> </span><br />
-        <label for="age">age</label>
+        <label for="age">Age</label>
         <input type="number" name="age" placeholder="age" />
         <span> <b class="warr"></b> </span><br />
         <label for="age">Phone Number</label>

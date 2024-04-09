@@ -1,0 +1,80 @@
+<!-- <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>form</title>
+  </head>
+  <body>
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Form Validation</title>
+        <style>
+          .error {
+            color: red;
+          }
+        </style>
+      </head>
+      <body>
+        <form id="myForm" onsubmit="return validateForm()">
+          <label for="email">Email:</label><br />
+          <input type="text" id="email" name="email" /><br />
+          <span id="emailError" class="error"></span><br />
+
+          <label for="password">Password:</label><br />
+          <input type="password" id="password" name="password" /><br />
+          <span id="passwordError" class="error"></span><br />
+
+          <input type="submit" value="Submit" />
+        </form>
+
+        <script src="form.js"></script>
+      </body>
+    </html>
+  </body>
+</html> -->
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p class="note">Fields marked with * are required.</p>
+    <form>
+      <label for="name">Name: *</label>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        pattern="[a-zA-Z]+"
+        placeholder="Monty"
+        required
+      />
+      <br />
+      <label for="name">Company Email Address: *</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="joe@company.com"
+        pattern=".+@company\.com"
+        required
+      />
+      <br />
+      <label for="name">Age: </label>
+      <input
+        type="number"
+        id="age"
+        name="age"
+        min="10"
+        max="80"
+        placeholder="30"
+      />
+      <br />
+    </form>
+  </body>
+</html>
