@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Display Image Buffer</title>
+  </head>
+  <body>
+    <img id="image" alt="Image" />
+    <script>
+      // Assuming imgBuffer is your image buffer (for demonstration purposes)
+      const imgBuffer = "";
+
+      // Convert buffer to Blob
+      const blob = new Blob([imgBuffer], { type: "image/png" });
+
+      // Create a data URL from the Blob
+      const url = URL.createObjectURL(blob);
+
+      // Display the image in an <img> element
+      const imgElement = document.getElementById("image");
+      imgElement.src = url;
+    </script>
+  </body>
+</html>
