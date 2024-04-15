@@ -206,12 +206,15 @@ let cards = htmlTemplate.replace(`__html__`, cardDummy);
 //   productData[0].title
 // );
 
-const allcard = productData.map((ele) => {
+const allCard = productData.map((ele) => {
   let page = cards
     .replace(`__title__`, ele.title)
     .replace(`____description____`, ele.description);
   return page;
 });
+
+const allcardString = allCard.join(" ");
+const page = htmlTemplate.replace("");
 
 // !Create the HTTP server
 const server = http.createServer((req, res) => {
