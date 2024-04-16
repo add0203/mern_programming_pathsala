@@ -6,7 +6,7 @@ const htmlTemplate = fs.readFileSync("./template/page.html", {
   encoding: "utf8",
 });
 const cardTemplate = fs.readFileSync("./template/card.html", "utf8");
-
+// const htmlCard = fs.readFileSync('./template/singleCard.html", "utf8"');
 // !card template
 
 const htmlCard = `<!DOCTYPE html>
@@ -101,7 +101,7 @@ const server = http.createServer((req, res) => {
 
   console.log(query);
 
-  if (pathname == "/home") {
+  if (pathname == "/") {
     res.end(page);
   } else if (pathname == "/product") {
     const id = query.id;
@@ -118,6 +118,8 @@ const server = http.createServer((req, res) => {
     // res.end(`${products[id].title}`);
     res.end(oneCard);
     // !
+  } else if (pathname == "/catogaries") {
+    // const name = query
   } else {
     res.end(`404`);
   }
@@ -125,6 +127,8 @@ const server = http.createServer((req, res) => {
   // res.end(page);
 });
 
-server.listen(1400, () => {
-  console.log("...............Server Started!.....................");
+let port = 5001 || process.env.PORT;
+
+server.listen(port, () => {
+  console.log(`Server running at http://localhost:${port}`);
 });
