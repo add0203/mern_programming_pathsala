@@ -1,13 +1,13 @@
 const http = require("http");
 const fs = require("fs");
 let url = require("url");
+const { json } = require("express");
 const data = fs.readFileSync("./data.json", "Utf8");
 const htmlTemplate = fs.readFileSync("./template/page.html", {
   encoding: "utf8",
 });
 const cardTemplate = fs.readFileSync("./template/card.html", "utf8");
 // const htmlCard = fs.readFileSync('./template/singleCard.html", "utf8"');
-// !card template
 
 const htmlCard = `<!DOCTYPE html>
 <html lang="en-US">
@@ -69,17 +69,27 @@ const htmlCard = `<!DOCTYPE html>
       <h3>__TITLE__</h3>
       <p>__INFO__</p>
       <p class="price">price : __PRICE__</p>
+       <a href="__HOME_LINK__">home...</a>
     </div>
   </div>
 </body>
 </html>
 `;
 
+const searchInput = `
+<form action='/product'>
+          <input
+            type="text" name="productName"
+          />
+          <button  type="submit">Search</button>
+        </form>`;
+
 const products = JSON.parse(data).products;
 
 const allCards = products.map((elem, i) => {
   let newCard = cardTemplate;
   newCard = newCard.replace("__TITLE__", elem.title);
+  newCard = newCard.replace("__SEARCH__", searchInput);
   newCard = newCard.replace("__INFO__", elem.description);
   newCard = newCard.replace("__IMG__", elem.thumbnail);
   newCard = newCard.replace("__PRICE__", elem.price);
@@ -100,26 +110,40 @@ const server = http.createServer((req, res) => {
   const { pathname, query } = url.parse(req.url, true);
 
   console.log(query);
+  // res.writeHead(200, { "content-type": "text/html" });
 
-  if (pathname == "/") {
-    res.end(page);
-  } else if (pathname == "/product") {
+  if (pathname == "/home") {
+    res.end(page + searchInput);
+  } else if (pathname === "/product") {
     const id = query.id;
     let i = products[id];
 
-    // console.log(products[id]);
+    const pName = query.productName;
 
-    let oneCard = htmlCard;
-    oneCard = oneCard.replace("__TITLE__", i.title);
-    oneCard = oneCard.replace("__INFO__", i.description);
-    oneCard = oneCard.replace("__IMG__", i.thumbnail);
-    oneCard = oneCard.replace("__PRICE__", i.price);
-
-    // res.end(`${products[id].title}`);
-    res.end(oneCard);
-    // !
-  } else if (pathname == "/catogaries") {
-    // const name = query
+    console.log(pName);
+    if (pName) {
+      const checkProduct = products.filter((element) => {
+        if (element.title.includes(pName)) {
+          return true;
+        } else {
+          false;
+        }
+      });
+      res.end(JSON.stringify(checkProduct));
+    } else if (i) {
+      let oneCard = htmlCard;
+      oneCard = oneCard.replace("__TITLE__", i.title);
+      oneCard = oneCard.replace("__INFO__", i.description);
+      oneCard = oneCard.replace("__IMG__", i.thumbnail);
+      oneCard = oneCard.replace("__PRICE__", i.price);
+      oneCard = oneCard.replace(
+        "__HOME_LINK__",
+        `http://localhost:${port}/home`
+      );
+      res.end(oneCard);
+    } else {
+      res.end("error");
+    }
   } else {
     res.end(`404`);
   }
