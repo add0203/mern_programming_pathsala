@@ -1,48 +1,6 @@
-let express = require("express");
-const fs = require("fs");
 const fsPromises = require("fs/promises");
-let app = express();
-let port = 3000 || process.env.PORT;
 
-app.use(express.json());
-
-app.use((req, res, next) => {
-  const time = new Date().toLocaleTimeString();
-  console.log("middleware called : ");
-  fsPromises.appendFile("./log.txt", req.url + "\t" + time + "\n");
-  next();
-});
-
-// app.get("/home", (req, res) => {
-//   res.send("home get");
-// });
-// app.post("/home", (req, res) => {
-//   res.send("home post");
-// });
-// app.delete("/home", (req, res) => {
-//   res.send("home delete");
-// });
-// app.patch("/", (req, res) => {
-//   res.send("patch");
-// });
-
-// ! with sync
-
-// app.get("/api/products", (req, res) => {
-//   const data = fs.readFileSync("./data.json", "utf-8");
-//   const arr = JSON.parse(data).products;
-//   res.json({
-//     status: " 200",
-//     results: arr.length,
-//     data: {
-//       products: arr,
-//     },
-//   });
-//   res.send("api/product Route");
-// });
-
-// !async
-app.get("/api/products", async (req, res) => {
+const getAllProduct = async (req, res) => {
   const data = await fsPromises.readFile("./data.json", "utf-8");
   const arr = JSON.parse(data);
   res.json({
@@ -52,9 +10,9 @@ app.get("/api/products", async (req, res) => {
       products: arr,
     },
   });
-});
+};
 
-app.post("/api/products", async (req, res) => {
+const addProduct = async (req, res) => {
   console.log(req.body);
   const { id, title, description, price } = req.body;
   if (!title || !price) {
@@ -88,9 +46,9 @@ app.post("/api/products", async (req, res) => {
       },
     });
   }
-});
+};
 
-app.put("/api/products/:id", async (req, res) => {
+const updateProduct = async (req, res) => {
   const data = req.body;
   const arr = JSON.parse(await fsPromises.readFile("./data.json", "utf-8"));
   const reqId = parseInt(req.params.id);
@@ -109,28 +67,9 @@ app.put("/api/products/:id", async (req, res) => {
       newProduct: null,
     },
   });
-});
+};
 
-// app.delete("/api/products/:id", async (req, res) => {
-//   const arr = JSON.parse(await fsPromises.readFile("./data.json", "utf-8"));
-//   const reqId = parseInt(req.params.id);
-//   const index = arr.findIndex((elem) => elem.id === reqId);
-//   if (index !== -1) {
-//     arr.splice(index, 1);
-//     await fsPromises.writeFile("./data.json", JSON.stringify(arr));
-//     res.json({
-//       status: 200,
-//       message: "Product deleted successfully",
-//     });
-//   } else {
-//     res.status(404).json({
-//       status: 404,
-//       message: "Product not found",
-//     });
-//   }
-// });
-
-app.delete("/api/products/:id", async (req, res) => {
+const deleteProduct = async (req, res) => {
   const arr = JSON.parse(await fsPromises.readFile("./data.json", "utf-8"));
 
   const reqId = parseInt(req.params.id);
@@ -146,9 +85,9 @@ app.delete("/api/products/:id", async (req, res) => {
       newProduct: null,
     },
   });
-});
+};
 
-app.patch("/api/products/:id", async (req, res) => {
+const patchProduct = async (req, res) => {
   const arr = JSON.parse(await fsPromises.readFile("./data.json", "utf-8"));
 
   const reqId = parseInt(req.params.id);
@@ -170,8 +109,12 @@ app.patch("/api/products/:id", async (req, res) => {
       newProduct: null,
     },
   });
-});
+};
 
-app.listen(port, () => {
-  console.log(`Server running at http://localhost:${port}`);
-});
+module.exports = {
+  getAllProduct,
+  addProduct,
+  updateProduct,
+  deleteProduct,
+  patchProduct,
+};
