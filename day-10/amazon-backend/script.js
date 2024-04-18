@@ -5,7 +5,11 @@ const mongoose = require("mongoose");
 // Route import
 const productRouter = require("./routes/productsRoutes");
 
-const test = require("./models/productsModels.js");
+// const test = require("./models/productsModels.js");
+
+// body parsel
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
 app.use("/api/products", productRouter);
 
