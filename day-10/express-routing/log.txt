@@ -24,3 +24,7 @@
 /api/users/	12:07:58 pm
 /api/products/	12:08:44 pm
 /api/products/	12:08:53 pm
+/api/products/	12:12:07 pm
+/api/products/4	12:12:17 pm
+/api/products/4	12:12:46 pm
+/api/products/3	12:13:09 pm

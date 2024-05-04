@@ -60,3 +60,43 @@ const obj4 = Object.assign({}, obj1, obj2);
 // console.log(obj1);
 // console.log(obj2);
 // console.log(obj4);
+
+// rest
+
+let obj = {
+  key1: "value1",
+  key2: "value2",
+  key3: "value3",
+};
+
+// Remove key2 from the object
+// delete obj.key2;
+
+// rest operator
+const { key1, ...rest } = obj;
+
+console.log(obj); // Output: { key1: 'value1', key3: 'value3' }
+console.log(rest);
+
+// // Online Javascript Editor for free
+// Write, Edit and Run your Javascript code using JS Online Compiler
+function sum(a, b, c = 0) {
+  console.log(a + b);
+}
+
+sum(1);
+sum(1, 2);
+sum(1, 2, 3);
+
+// using rest and resduce to handle when we doesnt know how many arguments is passed
+function sum1(...rest) {
+  const sumWithInitial = rest.reduce(
+    (accumulator, currentValue) => accumulator + currentValue,
+    (initialValue = 0)
+  );
+  console.log(sumWithInitial);
+}
+
+sum1(1);
+sum1(1, 2);
+sum1(1, 2, 3);

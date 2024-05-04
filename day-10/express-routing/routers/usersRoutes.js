@@ -2,6 +2,7 @@ const express = require("express");
 
 let usersController = require("../controllers/usersController");
 const userRouter = express.Router();
+
 userRouter
   .route("/")
   .get(usersController.getUser)

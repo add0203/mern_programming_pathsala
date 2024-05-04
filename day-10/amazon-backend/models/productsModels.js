@@ -19,7 +19,7 @@ const productsSchema = new mongoose.Schema({
   },
   updatedAt: {
     type: Date,
-    default: new Date(),
+    default: Date.now,
   },
 });
 

@@ -2,6 +2,7 @@ const productsModel = require("../models/productsModels");
 
 const getAllProducts = async (req, res) => {
   try {
+    const q = req.query;
     const data = await productsModel.find();
     console.log(data);
 
@@ -166,7 +167,10 @@ const patchProduct = async (req, res) => {
       {
         _id: id,
       },
-      data
+      data,
+      {
+        new: true,
+      }
     );
 
     if (product) {
