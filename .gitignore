@@ -3,6 +3,8 @@ jspm_packages/
 bower_components/
 rough/
 
+
+.parcel-cache
 npm-debug.log
 yarn-error.log
 yarn-debug.log
