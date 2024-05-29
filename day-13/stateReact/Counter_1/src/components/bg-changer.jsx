@@ -1,27 +1,8 @@
-import "./App.css";
-import Card from "./components/Card";
-import BgChanger from "./components/bg-changer";
-const productData = {
-  title: "Smartphone",
-  price: 699,
-  details: {
-    description: "A latest model smartphone with amazing features.",
-    manufacturer: "TechCorp",
-  },
-};
-function App() {
+import React from "react";
+
+function bgChanger() {
   return (
     <>
-      {/* <h1 className="text-3xl bg-green-500 p-4 rounded-md">
-        hello tailwind is active
-      </h1>
-      <Card
-        userName="Anand Dhar Dwivedi"
-        workAt="google.com"
-        proDate={productData}
-      /> */}
-
-      {/* <BgChanger /> */}
       <div
         className="w-full h-screen duration-200 justify-center justify-items-center"
         style={{ bacgroundColor: "green" }}
@@ -41,4 +22,4 @@ function App() {
   );
 }
 
-export default App;
+export default bgChanger;
