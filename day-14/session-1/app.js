@@ -3,15 +3,20 @@ import ReactDOM from "react-dom/client";
 import Homepage from "./src/pages/Homepage/Homepage";
 import ImageGenrator from "./src/pages/imageGenrator/ImageGenrator";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import History from "./src/pages/History/History";
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/home",
     element: <Homepage />,
   },
   {
     path: "/image-genrator",
     element: <ImageGenrator />,
+  },
+  {
+    path: "/history",
+    element: <History />,
   },
 ]);
 

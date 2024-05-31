@@ -2962,12 +2962,14 @@ var _homepageDefault = parcelHelpers.interopDefault(_homepage);
 var _imageGenrator = require("./src/pages/imageGenrator/ImageGenrator");
 var _imageGenratorDefault = parcelHelpers.interopDefault(_imageGenrator);
 var _reactRouterDom = require("react-router-dom");
+var _history = require("./src/pages/History/History");
+var _historyDefault = parcelHelpers.interopDefault(_history);
 const router = (0, _reactRouterDom.createBrowserRouter)([
     {
-        path: "/",
+        path: "/home",
         element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _homepageDefault.default), {}, void 0, false, {
             fileName: "app.js",
-            lineNumber: 10,
+            lineNumber: 11,
             columnNumber: 14
         }, undefined)
     },
@@ -2975,7 +2977,15 @@ const router = (0, _reactRouterDom.createBrowserRouter)([
         path: "/image-genrator",
         element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _imageGenratorDefault.default), {}, void 0, false, {
             fileName: "app.js",
-            lineNumber: 14,
+            lineNumber: 15,
+            columnNumber: 14
+        }, undefined)
+    },
+    {
+        path: "/history",
+        element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _historyDefault.default), {}, void 0, false, {
+            fileName: "app.js",
+            lineNumber: 19,
             columnNumber: 14
         }, undefined)
     }
@@ -2986,7 +2996,7 @@ const Heading = /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
     children: "Hello React"
 }, void 0, false, {
     fileName: "app.js",
-    lineNumber: 21,
+    lineNumber: 26,
     columnNumber: 17
 }, undefined);
 const App = ()=>{
@@ -2994,14 +3004,14 @@ const App = ()=>{
         router: router
     }, void 0, false, {
         fileName: "app.js",
-        lineNumber: 24,
+        lineNumber: 29,
         columnNumber: 10
     }, undefined);
 };
 _c = App;
 root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(App, {}, void 0, false, {
     fileName: "app.js",
-    lineNumber: 27,
+    lineNumber: 32,
     columnNumber: 13
 }, undefined));
 var _c;
@@ -3012,7 +3022,7 @@ $RefreshReg$(_c, "App");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom/client":"lOjBx","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./src/pages/Homepage/Homepage":"k1lv1","react-router-dom":"9xmpe","./src/pages/imageGenrator/ImageGenrator":"lW1HJ"}],"iTorj":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom/client":"lOjBx","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./src/pages/Homepage/Homepage":"k1lv1","react-router-dom":"9xmpe","./src/pages/imageGenrator/ImageGenrator":"lW1HJ","./src/pages/History/History":"hefR8"}],"iTorj":[function(require,module,exports) {
 "use strict";
 module.exports = require("ee51401569654d91");
 
@@ -27481,6 +27491,7 @@ var _navbarCss = require("./navbar.css");
 var _menuSharp = require("@mui/icons-material/MenuSharp");
 var _menuSharpDefault = parcelHelpers.interopDefault(_menuSharp);
 var _styles = require("@mui/material/styles");
+var _reactRouterDom = require("react-router-dom");
 var _s = $RefreshSig$();
 const theme = (0, _styles.createTheme)({
     palette: {
@@ -27498,50 +27509,34 @@ const Navbar = ()=>{
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "left",
                 children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
-                        href: "/home",
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                        to: "/home",
                         children: "Home"
-                    }, void 0, false, {
-                        fileName: "src/pages/common/Navbar/navbar.jsx",
-                        lineNumber: 18,
-                        columnNumber: 9
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
-                        href: "/image-genrator",
-                        children: "Image Genrator"
                     }, void 0, false, {
                         fileName: "src/pages/common/Navbar/navbar.jsx",
                         lineNumber: 19,
                         columnNumber: 9
                     }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
-                        href: "/contact",
-                        children: "Contact"
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                        to: "/image-genrator",
+                        children: "Image Genrator"
                     }, void 0, false, {
                         fileName: "src/pages/common/Navbar/navbar.jsx",
                         lineNumber: 20,
                         columnNumber: 9
                     }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
-                        href: "/us",
-                        children: "Us"
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                        to: "/history",
+                        children: "History"
                     }, void 0, false, {
                         fileName: "src/pages/common/Navbar/navbar.jsx",
-                        lineNumber: 21,
-                        columnNumber: 9
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
-                        href: "/help",
-                        children: "Help"
-                    }, void 0, false, {
-                        fileName: "src/pages/common/Navbar/navbar.jsx",
-                        lineNumber: 22,
+                        lineNumber: 24,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/pages/common/Navbar/navbar.jsx",
-                lineNumber: 17,
+                lineNumber: 18,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27553,30 +27548,30 @@ const Navbar = ()=>{
                         color: "primary"
                     }, void 0, false, {
                         fileName: "src/pages/common/Navbar/navbar.jsx",
-                        lineNumber: 26,
+                        lineNumber: 28,
                         columnNumber: 11
                     }, undefined)
                 }, void 0, false, {
                     fileName: "src/pages/common/Navbar/navbar.jsx",
-                    lineNumber: 25,
+                    lineNumber: 27,
                     columnNumber: 9
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/pages/common/Navbar/navbar.jsx",
-                lineNumber: 24,
+                lineNumber: 26,
                 columnNumber: 7
             }, undefined),
             menu && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 children: "hello"
             }, void 0, false, {
                 fileName: "src/pages/common/Navbar/navbar.jsx",
-                lineNumber: 29,
+                lineNumber: 31,
                 columnNumber: 16
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/pages/common/Navbar/navbar.jsx",
-        lineNumber: 16,
+        lineNumber: 17,
         columnNumber: 5
     }, undefined);
 };
@@ -27591,7 +27586,7 @@ $RefreshReg$(_c, "Navbar");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./navbar.css":"6DXnF","@mui/icons-material/MenuSharp":"9SalB","@mui/material/styles":"1lzai"}],"6DXnF":[function() {},{}],"9SalB":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./navbar.css":"6DXnF","@mui/icons-material/MenuSharp":"9SalB","@mui/material/styles":"1lzai","react-router-dom":"9xmpe"}],"6DXnF":[function() {},{}],"9SalB":[function(require,module,exports) {
 "use strict";
 "use client";
 var _interopRequireDefault = require("c4dffbc8b1893a57");
@@ -44073,33 +44068,99 @@ var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _imageGenratorCss = require("./ImageGenrator.css");
+var _navbar = require("../common/Navbar/navbar");
+var _navbarDefault = parcelHelpers.interopDefault(_navbar);
+var _s = $RefreshSig$();
 const ImageGenrator = ()=>{
+    _s();
+    const [display, setDisplay] = (0, _react.useState)(false);
+    const [valueEntered, setValueEntered] = (0, _react.useState)("Genrating....");
+    const handleRefresh = ()=>{
+        window.location.reload();
+    };
+    const func = (e)=>{
+        setValueEntered(e.target.value);
+    };
+    //   or use call back
+    //   const layer = () => {
+    //     func("layer called");
+    //   };
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "image-gen-parent-container",
         children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                src: "https://picsum.photos/300/300",
-                alt: ""
-            }, void 0, false, {
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _navbarDefault.default), {}, void 0, false, {
                 fileName: "src/pages/imageGenrator/ImageGenrator.jsx",
-                lineNumber: 6,
+                lineNumber: 22,
                 columnNumber: 7
             }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                className: "submit-button",
-                children: "submit"
-            }, void 0, false, {
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "image-gen-parent-container",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                        onClick: ()=>{
+                            setDisplay(!display);
+                        },
+                        className: "",
+                        children: "Hide Image"
+                    }, void 0, false, {
+                        fileName: "src/pages/imageGenrator/ImageGenrator.jsx",
+                        lineNumber: 24,
+                        columnNumber: 9
+                    }, undefined),
+                    display && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "img",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                            src: "https://picsum.photos/300/300",
+                            alt: ""
+                        }, void 0, false, {
+                            fileName: "src/pages/imageGenrator/ImageGenrator.jsx",
+                            lineNumber: 34,
+                            columnNumber: 13
+                        }, undefined)
+                    }, void 0, false, {
+                        fileName: "src/pages/imageGenrator/ImageGenrator.jsx",
+                        lineNumber: 33,
+                        columnNumber: 11
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        class: "inputbox",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                                onChange: (e)=>{
+                                    func(e);
+                                },
+                                required: "required",
+                                type: "text"
+                            }, void 0, false, {
+                                fileName: "src/pages/imageGenrator/ImageGenrator.jsx",
+                                lineNumber: 39,
+                                columnNumber: 11
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("i", {}, void 0, false, {
+                                fileName: "src/pages/imageGenrator/ImageGenrator.jsx",
+                                lineNumber: 47,
+                                columnNumber: 11
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/pages/imageGenrator/ImageGenrator.jsx",
+                        lineNumber: 38,
+                        columnNumber: 9
+                    }, undefined),
+                    valueEntered
+                ]
+            }, void 0, true, {
                 fileName: "src/pages/imageGenrator/ImageGenrator.jsx",
-                lineNumber: 7,
+                lineNumber: 23,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/pages/imageGenrator/ImageGenrator.jsx",
-        lineNumber: 5,
+        lineNumber: 21,
         columnNumber: 5
     }, undefined);
 };
+_s(ImageGenrator, "Ia4cZp48b9HRnZ/6ChRgflLUAZw=");
 _c = ImageGenrator;
 exports.default = ImageGenrator;
 var _c;
@@ -44110,6 +44171,239 @@ $RefreshReg$(_c, "ImageGenrator");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./ImageGenrator.css":"3em28"}],"3em28":[function() {},{}]},["hPIHA","1xC6H","igcvL"], "igcvL", "parcelRequirea305")
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./ImageGenrator.css":"3em28","../common/Navbar/navbar":"6O5to"}],"3em28":[function() {},{}],"hefR8":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$6be9 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$6be9.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _historyCss = require("./History.css");
+var _navbar = require("../common/Navbar/navbar");
+var _navbarDefault = parcelHelpers.interopDefault(_navbar);
+var _historyCard = require("./HistoryCard");
+var _historyCardDefault = parcelHelpers.interopDefault(_historyCard);
+var _s = $RefreshSig$();
+const dummyData = [
+    {
+        id: "1",
+        title: "Learn React",
+        date: "2024-06-01"
+    },
+    {
+        id: "2",
+        title: "Build a MERN Stack App",
+        date: "2024-06-02"
+    },
+    {
+        id: "3",
+        title: "Deploy to Heroku",
+        date: "2024-06-03"
+    },
+    {
+        id: "4",
+        title: "Understand Redux",
+        date: "2024-06-04"
+    },
+    {
+        id: "5",
+        title: "Learn TypeScript",
+        date: "2024-06-05"
+    },
+    {
+        id: "6",
+        title: "Master CSS Grid",
+        date: "2024-06-06"
+    },
+    {
+        id: "7",
+        title: "Write Unit Tests",
+        date: "2024-06-07"
+    },
+    {
+        id: "8",
+        title: "Integrate with REST APIs",
+        date: "2024-06-08"
+    },
+    {
+        id: "9",
+        title: "Explore GraphQL",
+        date: "2024-06-09"
+    },
+    {
+        id: "10",
+        title: "Optimize Performance",
+        date: "2024-06-10",
+        day: {
+            dayName: "monday"
+        }
+    }
+];
+const changeTitle = ()=>{
+    console.log("title changed");
+};
+const changeDescription = ()=>{
+    console.log("Description changed");
+};
+const History = ()=>{
+    _s();
+    // change in that variable tigger the use Effect functions : keep watch of any state variable
+    const [title, setTitle] = (0, _react.useState)();
+    const [desc, setDecs] = (0, _react.useState)();
+    (0, _react.useEffect)(()=>{
+        console.log("title changed");
+    }, [
+        title
+    ]);
+    (0, _react.useEffect)(()=>{
+        console.log("desc changed");
+    }, [
+        desc
+    ]);
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _navbarDefault.default), {}, void 0, false, {
+                fileName: "src/pages/History/History.jsx",
+                lineNumber: 84,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "history-main-container",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                        onClick: changeTitle,
+                        children: "change title"
+                    }, void 0, false, {
+                        fileName: "src/pages/History/History.jsx",
+                        lineNumber: 86,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                        onClick: ()=>{
+                            changeTitle();
+                            changeDescription();
+                        },
+                        children: "change title and discription"
+                    }, void 0, false, {
+                        fileName: "src/pages/History/History.jsx",
+                        lineNumber: 87,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                        onClick: changeDescription,
+                        children: "change discription"
+                    }, void 0, false, {
+                        fileName: "src/pages/History/History.jsx",
+                        lineNumber: 95,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                        type: "text",
+                        value: title,
+                        onChange: (e)=>{
+                            setTitle(e.target.value);
+                        }
+                    }, void 0, false, {
+                        fileName: "src/pages/History/History.jsx",
+                        lineNumber: 96,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
+                        fileName: "src/pages/History/History.jsx",
+                        lineNumber: 103,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                        value: desc,
+                        type: "text",
+                        onChange: (e)=>{
+                            setDecs(e.target.value);
+                        }
+                    }, void 0, false, {
+                        fileName: "src/pages/History/History.jsx",
+                        lineNumber: 104,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
+                        fileName: "src/pages/History/History.jsx",
+                        lineNumber: 111,
+                        columnNumber: 9
+                    }, undefined),
+                    "title : ",
+                    title,
+                    "desc : ",
+                    desc
+                ]
+            }, void 0, true, {
+                fileName: "src/pages/History/History.jsx",
+                lineNumber: 85,
+                columnNumber: 7
+            }, undefined),
+            "hi"
+        ]
+    }, void 0, true, {
+        fileName: "src/pages/History/History.jsx",
+        lineNumber: 83,
+        columnNumber: 5
+    }, undefined);
+};
+_s(History, "Pcv/Syp3wNEcZP3elszMSO1FjP0=");
+_c = History;
+exports.default = History;
+var _c;
+$RefreshReg$(_c, "History");
+
+  $parcel$ReactRefreshHelpers$6be9.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./History.css":"9kO8m","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../common/Navbar/navbar":"6O5to","./HistoryCard":"7VmiR"}],"9kO8m":[function() {},{}],"7VmiR":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$d554 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$d554.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _historyCardCss = require("./HistoryCard.css");
+const HistoryCard = ({ data })=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        children: [
+            "title : ",
+            data.title,
+            "date : ",
+            data.date,
+            "image : ",
+            data.image,
+            "image : ",
+            data.day?.dayName
+        ]
+    }, void 0, true, {
+        fileName: "src/pages/History/HistoryCard.jsx",
+        lineNumber: 5,
+        columnNumber: 5
+    }, undefined);
+};
+_c = HistoryCard;
+exports.default = HistoryCard;
+var _c;
+$RefreshReg$(_c, "HistoryCard");
+
+  $parcel$ReactRefreshHelpers$d554.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./HistoryCard.css":"6AIv4"}],"6AIv4":[function() {},{}]},["hPIHA","1xC6H","igcvL"], "igcvL", "parcelRequirea305")
 
 //# sourceMappingURL=index.5baa4167.js.map
