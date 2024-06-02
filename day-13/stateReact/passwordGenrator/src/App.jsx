@@ -4,7 +4,8 @@ import "./App.css";
 function App() {
   const [password, setPassword] = useState();
   const [length, setLength] = useState();
-  const [lengtnumAllowed, setnumAllowed] = useState();
+  const [numberAllowed, setNumberAllowed] = useState();
+  const [charAllowed, setCharAllowed] = useState();
 
   return (
     <div className="w-full max-w-md mx-auto shadow-md rounded-lg px-4 py-3 my-8 bg-gray-800">
@@ -35,13 +36,23 @@ function App() {
         </label>
         <input
           type="checkbox"
-          defaultChecked={numAllowed}
+          defaultChecked={numberAllowed}
           onChange={() => {
-            setnumAllowed((prev) => !prev);
+            setNumberAllowed((prev) => !prev);
           }}
         />
         <label htmlFor="length" className="text-white">
-          Length : {length}
+          Number
+        </label>
+        <input
+          type="checkbox"
+          defaultChecked={charAllowed}
+          onChange={() => {
+            setCharAllowed((prev) => !prev);
+          }}
+        />
+        <label htmlFor="charInput" className="text-white">
+          Character
         </label>
       </div>
     </div>
