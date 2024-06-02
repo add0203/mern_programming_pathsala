@@ -1,12 +1,13 @@
 import React from "react";
 import "./HistoryCard.css";
-const HistoryCard = ({ data }) => {
+const HistoryCard = (data) => {
   return (
     <div>
-      title : {data.title}
-      date : {data.date}
-      image : {data.image}
-      image : {data.day?.dayName}
+      <div className="history-card">
+        <h4>{data.title}</h4>
+        <p>{data.description}</p>
+        <Link to={`/history/${data.id}`}>More..</Link>
+      </div>
     </div>
   );
 };

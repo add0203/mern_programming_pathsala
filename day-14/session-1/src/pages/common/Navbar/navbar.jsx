@@ -1,36 +1,53 @@
-import React, { useState } from "react";
+import { useContext } from "react";
+import React, { useEffect, useState } from "react";
 import "./navbar.css";
-import MenuSharpIcon from "@mui/icons-material/MenuSharp";
-import { ThemeProvider, createTheme } from "@mui/material/styles";
-import { Link } from "react-router-dom";
 
-const theme = createTheme({
-  palette: {
-    primary: {
-      main: "#FFFFFF", // Change primary color
-    },
-  },
-});
-const Navbar = () => {
-  const [menu, setMenu] = useState(false);
+import { Link } from "react-router-dom";
+import PointsContext from "../../../context/Context.jsx";
+
+const Navbar = (props) => {
+  const { userPoints, setUserPoints } = useContext(PointsContext);
+
+  // console.log(useContext(PointsContext));
+  const page = props.pageName;
+
+  const customColor = (x) => {
+    return { color: page === x ? "red" : "white" };
+  };
+  // console.log(userPoints);
+
   return (
     <div className="header-parent-container">
       <div className="left">
-        <Link to="/home">Home</Link>
-        <Link to="/image-genrator">Image Genrator</Link>
-        {/* <a href="/contact">Contact</a>
-        <a href="/us">Us</a>
-        <a href="/help">Help</a> */}
-        <Link to="/history">History</Link>
+        <Link to="/" style={customColor("home")}>
+          Home
+        </Link>
+
+        <Link to="/image-genrator" style={customColor("imageGenerator")}>
+          Image Genrator
+        </Link>
+
+        <Link to="/history" style={customColor("history")}>
+          History
+        </Link>
+        <Link to="/sign-up" style={customColor("signUp")}>
+          SingUp
+        </Link>
       </div>
-      <div onClick={() => setMenu(!menu)} className="right">
-        <ThemeProvider theme={theme}>
-          <MenuSharpIcon color="primary" />
-        </ThemeProvider>
+      <div className="right">
+        <div className="circle">{userPoints}</div>
       </div>
-      {menu && <div>hello</div>}
     </div>
   );
 };
 
 export default Navbar;
+
+{
+  /* <div onClick={() => setMenu(!menu)} className="right">
+  <ThemeProvider theme={theme}>
+    <MenuSharpIcon color="primary" />
+  </ThemeProvider>
+</div>
+{menu && <div>hello</div>} */
+}
