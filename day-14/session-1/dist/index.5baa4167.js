@@ -34375,7 +34375,7 @@ const ImageGenrator = ()=>{
     const handleClick = async ()=>{
         // setUserPoints(userPoints - 1);
         try {
-            const res = await fetch(`${"http://localhost:5001"}/api/v1/image`, {
+            const res = await fetch(`${"https://mern-programming-pathsala.onrender.com"}/api/v1/image`, {
                 method: "POST",
                 body: JSON.stringify({
                     searchText: searchText
@@ -34688,7 +34688,7 @@ const SignUp = ()=>{
     const handleClick = async ()=>{
         console.log(password, email);
         if (!email && !password) return;
-        const res = await fetch(`${"http://localhost:5001"}/api/v1/auth/signUp`, {
+        const res = await fetch(`${"https://mern-programming-pathsala.onrender.com"}/api/v1/auth/signUp`, {
             // http://localhost:5001/api/v1/auth/signup
             method: "POST",
             body: JSON.stringify({
@@ -34767,6 +34767,6 @@ $RefreshReg$(_c, "SignUp");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../../common/Navbar/navbar":"6O5to","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./SignUp.css":"3pgeH"}],"3pgeH":[function() {},{}]},["hPIHA","1xC6H","igcvL"], "igcvL", "parcelRequirea305")
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../../common/Navbar/navbar":"6O5to","./SignUp.css":"3pgeH","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"3pgeH":[function() {},{}]},["hPIHA","1xC6H","igcvL"], "igcvL", "parcelRequirea305")
 
 //# sourceMappingURL=index.5baa4167.js.map
