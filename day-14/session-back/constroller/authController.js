@@ -8,7 +8,8 @@ const passwordHash = async (password) => {
 };
 
 const genrateToken = async (userId) => {
-  return await jwt.sign({ userId: userId }, "process.env.JWT_SECRET", {
+  // return await jwt.sign({ userId: userId }, process.env.JWT_SECRET, {
+  return await jwt.sign({ userId: userId }, process.env.JWT_SECRET, {
     expiresIn: "90d",
   });
 };
@@ -16,8 +17,6 @@ const genrateToken = async (userId) => {
 const signUp = async (req, res) => {
   const { email: email, password: password } = req.body;
 
-  console.log(password);
-  console.log(email);
   try {
     if (!email || !password) {
       res.json({
@@ -78,7 +77,7 @@ const login = async (req, res) => {
             status: "Unauthorized",
           });
         } else {
-          res.status(201).json({
+          res.status(200).json({
             status: "success",
             data: {
               user: userExists,
