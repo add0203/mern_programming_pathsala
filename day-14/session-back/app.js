@@ -10,9 +10,6 @@ const cloudinary = require("cloudinary").v2;
 app.use(express.json());
 app.use(cors());
 
-// const your_cloud_name = "dyfal2qlj";
-// const your_api_key = "735252581259248";
-// const your_api_secret = "HoRiAhYiA6IqEnVltya524znzWY";
 
 
 cloudinary.config({
