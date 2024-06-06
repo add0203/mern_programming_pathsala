@@ -49,9 +49,6 @@ const genrateImage = async (req, res) => {
 
     imageUrl = await apiResponse.json();
     
-
-
-
     //changes occured
 
     let imageUrlForMongodb = await downloadAndUploadImage(imageUrl,searchText);
@@ -60,9 +57,9 @@ const genrateImage = async (req, res) => {
 // console.log(imageUrlForMongodb.imageUrl);
         const imageAtMongoDb = await imageModel.create({
           searchText: searchText,
-          imageUrl: imageUrlForMongodb.imageUrl,
+          imageUrl: imageUrlForMongodb,
         });
-// console.log(imageAtMongoDb.imageUrl);
+// console.log(imageAtMongoDb);
         if(!imageAtMongoDb)
           {
             console.log("not saved at mongo db");
