@@ -20,7 +20,7 @@ cloudinary.config({
 
 app.use("/api/v1/auth", authRouter);
 
-app.use((req, res, next) => {
+app.use(async(req, res, next) => {
   let token;
   if (
     req.headers.authorization &&
@@ -30,7 +30,7 @@ app.use((req, res, next) => {
   }
   try {
       console.log("up");
-      jwt.verify(token, process.env.JWT_SECRET);
+      await jwt.verify(token, process.env.JWT_SECRET);
       console.log("down");
     next();
   } catch (err) {
