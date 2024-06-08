@@ -28,7 +28,7 @@ app.use(async (req, res, next) => {
   try {
     console.log("token-checking");
     jwt.verify(token, process.env.JWT_SECRET);
-    // console.log("token-varified");
+    console.log("token-varified");
     // const userPoints = localStorage.getItem("userPoints");
     // if (!userPoints === 0)
     next();

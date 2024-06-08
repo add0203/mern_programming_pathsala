@@ -8,8 +8,7 @@ const passwordHash = async (password) => {
 };
 
 const genrateToken = async (userId) => {
-  // return await jwt.sign({ userId: userId }, process.env.JWT_SECRET, {
-  return await jwt.sign({ userId: userId }, process.env.JWT_SECRET, {
+  return jwt.sign({ userId: userId }, process.env.JWT_SECRET, {
     expiresIn: "90d",
   });
 };
@@ -19,11 +18,9 @@ const signUp = async (req, res) => {
 
   try {
     if (!email || !password) {
-      res.json({
-        status: 401,
-        userData: {
-          user: "not Created",
-        },
+      return res.status(400).json({
+        status: 400,
+        message: "Email and password are required.",
       });
     }
 
@@ -35,17 +32,18 @@ const signUp = async (req, res) => {
     });
 
     res.status(200).json({
+      status: 200,
       user: {
         userData: userCreated,
-        // it may be _id : ERROR
         Token: await genrateToken(userCreated._id),
+        message: "User created successfully!",
       },
     });
   } catch (error) {
     console.log(error);
     res.status(500).json({
-      status: "fail",
-      message: error?.message,
+      status: 500,
+      message: error.message || "An error occurred during sign up.",
     });
   }
 };
@@ -55,42 +53,44 @@ const login = async (req, res) => {
 
   try {
     if (!email || !password) {
-      res.json({
-        status: 401,
-        userData: {
-          user: "not Created",
-        },
+      return res.status(400).json({
+        status: 400,
+        message: "Email and password are required.",
       });
     } else {
       const userExists = await userModel.findOne({ email });
 
       if (!userExists) {
-        res.status(404).json({
-          status: "user not exist",
+        return res.status(404).json({
+          status: 404,
+          message: "User does not exist.",
         });
       } else {
         const hashedPassword = userExists.password;
         const result = await bcrypt.compare(password, hashedPassword);
 
         if (!result) {
-          res.status(401).json({
-            status: "Unauthorized",
-          });
-        } else {
-          res.status(200).json({
-            status: "success",
-            data: {
-              user: userExists,
-              token: await genrateToken(userExists.id),
-            },
+          return res.status(401).json({
+            status: 401,
+            message: "Unauthorized. Invalid password.",
           });
         }
+        const token = await genrateToken(userExists.id);
+
+        res.status(200).json({
+          status: 200,
+          data: {
+            user: userExists,
+            token: token,
+            message: "User logged in successfully.",
+          },
+        });
       }
     }
   } catch (error) {
     res.status(500).json({
-      status: "fail",
-      message: error?.message,
+      status: 500,
+      message: error.message || "An error occurred during sign in.",
     });
   }
 };
