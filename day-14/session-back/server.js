@@ -4,8 +4,9 @@ const app = require("./app.js");
 
 // const test = require("./models/reviewModel.js");
 
-// const URL ="mongodb+srv://$_USERNAME_$:$_PASSWORD_$@clustor0.pc5ijeq.mongodb.net/$_DB_NAME_$?retryWrites=true&w=majority&appName=clustor0";
-const URL = "mongodb://localhost:27017";
+const URL =
+  "mongodb+srv://$_USERNAME_$:$_PASSWORD_$@clustor0.pc5ijeq.mongodb.net/$_DB_NAME_$?retryWrites=true&w=majority&appName=clustor0";
+// const URL = "mongodb://localhost:27017";
 
 // const dbUsername = process.env.dbUsername;
 // const dbPass = process.env.dbPass;

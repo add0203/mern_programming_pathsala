@@ -26,10 +26,19 @@ app.use(async (req, res, next) => {
     token = req.headers.authorization.split(" ")[1];
   }
   try {
-    console.log("up");
-    await jwt.verify(token, process.env.JWT_SECRET);
-    console.log("down");
+    console.log("token-checking");
+    jwt.verify(token, process.env.JWT_SECRET);
+    // console.log("token-varified");
+    // const userPoints = localStorage.getItem("userPoints");
+    // if (!userPoints === 0)
     next();
+    // else {
+    //   console.log("userPoint is Zero");
+    //   return res.status(201).json({
+    //     status: "userPoints = 0",
+    //     message: "Payment required",
+    //   });
+    // }
   } catch (err) {
     return res.status(401).json({
       status: "fail",
