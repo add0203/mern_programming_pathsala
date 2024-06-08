@@ -5,9 +5,6 @@ const cloudinary = require("cloudinary").v2; // Assuming you have configured Clo
 const crypto = require("crypto");
 
 
-
-
-
 function generateRandomChar() {
   const characters =
     "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";

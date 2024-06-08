@@ -6,11 +6,8 @@ const cors = require("cors");
 const jwt = require("jsonwebtoken");
 const cloudinary = require("cloudinary").v2;
 
-
 app.use(express.json());
 app.use(cors());
-
-
 
 cloudinary.config({
   cloud_name: process.env.your_cloud_name,
@@ -20,7 +17,7 @@ cloudinary.config({
 
 app.use("/api/v1/auth", authRouter);
 
-app.use(async(req, res, next) => {
+app.use(async (req, res, next) => {
   let token;
   if (
     req.headers.authorization &&
@@ -29,9 +26,9 @@ app.use(async(req, res, next) => {
     token = req.headers.authorization.split(" ")[1];
   }
   try {
-      console.log("up");
-      await jwt.verify(token, process.env.JWT_SECRET);
-      console.log("down");
+    console.log("up");
+    await jwt.verify(token, process.env.JWT_SECRET);
+    console.log("down");
     next();
   } catch (err) {
     return res.status(401).json({
