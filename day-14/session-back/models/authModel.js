@@ -9,6 +9,7 @@ const userSchema = mongoose.Schema({
     type: String,
     default: "default-user",
   },
+
   createdAt: {
     type: Date,
     default: new Date(),

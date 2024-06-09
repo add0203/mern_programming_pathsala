@@ -1,6 +1,5 @@
 const imageModel = require("../models/imageModel");
 const { downloadAndUploadImage } = require("./downloadAndUpload");
-const cloudinary = require("cloudinary").v2;
 
 const genrateImage = async (req, res) => {
   const body = req.body;
