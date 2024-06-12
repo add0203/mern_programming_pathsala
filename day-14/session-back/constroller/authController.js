@@ -13,6 +13,10 @@ const genrateToken = async (userId) => {
   });
 };
 
+const trimExtraSpaces = (str) => {
+  return str.trim().replace(/\s+/g, " ");
+};
+
 const signUp = async (req, res) => {
   const { email: email, password: password } = req.body;
 
@@ -24,11 +28,17 @@ const signUp = async (req, res) => {
       });
     }
 
-    const hashedPassword = await passwordHash(password);
+    let userCoins = 5;
 
+    // trim the terminal white space
+    let trimmedEmail = trimExtraSpaces(email);
+    let trimmedPassword = trimExtraSpaces(password);
+
+    const hashedPassword = await passwordHash(trimmedPassword);
     const userCreated = await userModel.create({
-      email,
+      email: trimmedEmail,
       password: hashedPassword,
+      userCoins: userCoins,
     });
 
     res.status(200).json({
@@ -37,6 +47,8 @@ const signUp = async (req, res) => {
         userData: userCreated,
         Token: await genrateToken(userCreated._id),
         message: "User created successfully!",
+        // userPoint setup
+        userCoins: userCoins,
       },
     });
   } catch (error) {
@@ -58,7 +70,10 @@ const login = async (req, res) => {
         message: "Email and password are required.",
       });
     } else {
-      const userExists = await userModel.findOne({ email });
+      // trim email and password before the checking
+      trimmedEmail = trimExtraSpaces(email);
+      trimmedPassword = trimExtraSpaces(password);
+      const userExists = await userModel.findOne({ email: trimmedEmail });
 
       if (!userExists) {
         return res.status(404).json({
@@ -67,7 +82,7 @@ const login = async (req, res) => {
         });
       } else {
         const hashedPassword = userExists.password;
-        const result = await bcrypt.compare(password, hashedPassword);
+        const result = await bcrypt.compare(trimmedPassword, hashedPassword);
 
         if (!result) {
           return res.status(401).json({

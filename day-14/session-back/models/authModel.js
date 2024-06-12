@@ -9,7 +9,10 @@ const userSchema = mongoose.Schema({
     type: String,
     default: "default-user",
   },
-
+  userCoins: {
+    type: Number,
+    // default: 5,
+  },
   createdAt: {
     type: Date,
     default: new Date(),
