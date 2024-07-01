@@ -141,10 +141,10 @@ const generateImage = async (req, res) => {
     const res = await fetch("https://api.hotpot.ai/art-maker-sdte-zmjbcrr", {
   "headers": {
     "accept": "*/*",
-    "accept-language": "en-US,en;q=0.6",
-    "api-token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MTk3NjcxNTQsImV4cCI6MTcxOTc3NDM1NH0.T_nCcWfuzK3KASrRCjEcYzD1Qh01J_q4mpuyflsvYko",
+    "accept-language": "en-US,en;q=0.8",
+    "api-token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MTk4NDExNzcsImV4cCI6MTcxOTg0ODM3N30.O8z5iV_WCVFVUT1Zi3tFyk7IL76rLmF8XN6mNDkfNw4",
     "authorization": "hotpot-t2mJbCr8292aQzp8CnEPaK",
-    "content-type": "multipart/form-data; boundary=----WebKitFormBoundaryw8rv01mktiB2PLEM",
+    "content-type": "multipart/form-data; boundary=----WebKitFormBoundaryoiByvSqx4TUrhvss",
     "sec-ch-ua": "\"Not/A)Brand\";v=\"8\", \"Chromium\";v=\"126\", \"Brave\";v=\"126\"",
     "sec-ch-ua-mobile": "?0",
     "sec-ch-ua-platform": "\"Windows\"",
@@ -155,7 +155,7 @@ const generateImage = async (req, res) => {
   },
   "referrer": "https://hotpot.ai/",
   "referrerPolicy": "strict-origin-when-cross-origin",
-  "body": `------WebKitFormBoundaryw8rv01mktiB2PLEM\r\nContent-Disposition: form-data; name=\"seedValue\"\r\n\r\nnull\r\n------WebKitFormBoundaryw8rv01mktiB2PLEM\r\nContent-Disposition: form-data; name=\"inputText\"\r\n\r\n${searchText}\r\n------WebKitFormBoundaryw8rv01mktiB2PLEM\r\nContent-Disposition: form-data; name=\"width\"\r\n\r\n512\r\n------WebKitFormBoundaryw8rv01mktiB2PLEM\r\nContent-Disposition: form-data; name=\"height\"\r\n\r\n512\r\n------WebKitFormBoundaryw8rv01mktiB2PLEM\r\nContent-Disposition: form-data; name=\"styleId\"\r\n\r\n49\r\n------WebKitFormBoundaryw8rv01mktiB2PLEM\r\nContent-Disposition: form-data; name=\"styleLabel\"\r\n\r\nPhoto General 1\r\n------WebKitFormBoundaryw8rv01mktiB2PLEM\r\nContent-Disposition: form-data; name=\"isPrivate\"\r\n\r\nfalse\r\n------WebKitFormBoundaryw8rv01mktiB2PLEM\r\nContent-Disposition: form-data; name=\"price\"\r\n\r\n0\r\n------WebKitFormBoundaryw8rv01mktiB2PLEM\r\nContent-Disposition: form-data; name=\"requestId\"\r\n\r\n21-V7Cl6OlpygKojBf\r\n------WebKitFormBoundaryw8rv01mktiB2PLEM\r\nContent-Disposition: form-data; name=\"resultUrl\"\r\n\r\nhttps://hotpotmedia.s3.us-east-2.amazonaws.com/21-V7Cl6OlpygKojBf.png\r\n------WebKitFormBoundaryw8rv01mktiB2PLEM--\r\n`,
+  "body": `------WebKitFormBoundaryoiByvSqx4TUrhvss\r\nContent-Disposition: form-data; name=\"seedValue\"\r\n\r\nnull\r\n------WebKitFormBoundaryoiByvSqx4TUrhvss\r\nContent-Disposition: form-data; name=\"inputText\"\r\n\r\n${searchText}\r\n------WebKitFormBoundaryoiByvSqx4TUrhvss\r\nContent-Disposition: form-data; name=\"width\"\r\n\r\n512\r\n------WebKitFormBoundaryoiByvSqx4TUrhvss\r\nContent-Disposition: form-data; name=\"height\"\r\n\r\n512\r\n------WebKitFormBoundaryoiByvSqx4TUrhvss\r\nContent-Disposition: form-data; name=\"styleId\"\r\n\r\n49\r\n------WebKitFormBoundaryoiByvSqx4TUrhvss\r\nContent-Disposition: form-data; name=\"styleLabel\"\r\n\r\nPhoto General 1\r\n------WebKitFormBoundaryoiByvSqx4TUrhvss\r\nContent-Disposition: form-data; name=\"isPrivate\"\r\n\r\nfalse\r\n------WebKitFormBoundaryoiByvSqx4TUrhvss\r\nContent-Disposition: form-data; name=\"price\"\r\n\r\n0\r\n------WebKitFormBoundaryoiByvSqx4TUrhvss\r\nContent-Disposition: form-data; name=\"requestId\"\r\n\r\n21-Qc9sic0ffIB7zSo\r\n------WebKitFormBoundaryoiByvSqx4TUrhvss\r\nContent-Disposition: form-data; name=\"resultUrl\"\r\n\r\nhttps://hotpotmedia.s3.us-east-2.amazonaws.com/21-Qc9sic0ffIB7zSo.png\r\n------WebKitFormBoundaryoiByvSqx4TUrhvss--\r\n`,
   "method": "POST",
   "mode": "cors",
   "credentials": "include"
