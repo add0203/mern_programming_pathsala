@@ -150,15 +150,15 @@ const generateImage = async (req, res) => {
     "sec-ch-ua-platform": "\"Android\"",
     "sec-fetch-dest": "empty",
     "sec-fetch-mode": "cors",
-    "sec-fetch-site": "same-site"
+    "sec-fetch-site": "same-site",
+    "Referer": "https://hotpot.ai/",
+    "Referrer-Policy": "strict-origin-when-cross-origin"
   },
-  "referrer": "https://hotpot.ai/",
-  "referrerPolicy": "strict-origin-when-cross-origin",
   "body": `------WebKitFormBoundaryKaFd2JLyUO13C9ZL\r\nContent-Disposition: form-data; name=\"seedValue\"\r\n\r\nnull\r\n------WebKitFormBoundaryKaFd2JLyUO13C9ZL\r\nContent-Disposition: form-data; name=\"inputText\"\r\n\r\n${searchText}\r\n------WebKitFormBoundaryKaFd2JLyUO13C9ZL\r\nContent-Disposition: form-data; name=\"width\"\r\n\r\n512\r\n------WebKitFormBoundaryKaFd2JLyUO13C9ZL\r\nContent-Disposition: form-data; name=\"height\"\r\n\r\n512\r\n------WebKitFormBoundaryKaFd2JLyUO13C9ZL\r\nContent-Disposition: form-data; name=\"styleId\"\r\n\r\n49\r\n------WebKitFormBoundaryKaFd2JLyUO13C9ZL\r\nContent-Disposition: form-data; name=\"styleLabel\"\r\n\r\nPhoto General 1\r\n------WebKitFormBoundaryKaFd2JLyUO13C9ZL\r\nContent-Disposition: form-data; name=\"isPrivate\"\r\n\r\nfalse\r\n------WebKitFormBoundaryKaFd2JLyUO13C9ZL\r\nContent-Disposition: form-data; name=\"price\"\r\n\r\n0\r\n------WebKitFormBoundaryKaFd2JLyUO13C9ZL\r\nContent-Disposition: form-data; name=\"requestId\"\r\n\r\n8-Ol9s3Q8zVt1KvMt\r\n------WebKitFormBoundaryKaFd2JLyUO13C9ZL\r\nContent-Disposition: form-data; name=\"resultUrl\"\r\n\r\nhttps://hotpotmedia.s3.us-east-2.amazonaws.com/8-Ol9s3Q8zVt1KvMt.png\r\n------WebKitFormBoundaryKaFd2JLyUO13C9ZL--\r\n`,
-  "method": "POST",
-  "mode": "cors",
-  "credentials": "include"
+  "method": "POST"
 });
+      
+      
       
 //       fetch("https://api.hotpot.ai/art-maker-sdte-zmjbcrr", {
 //   "headers": {
