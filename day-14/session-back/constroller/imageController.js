@@ -142,10 +142,10 @@ const generateImage = async (req, res) => {
   "headers": {
     "accept": "*/*",
     "accept-language": "en-US,en;q=0.9,hi;q=0.8",
-    "api-token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MjU3Mjk1NDAsImV4cCI6MTcyNTczNjc0MH0.CS0sa2FCz-cFSb4H0N0_DEllfItC9XYQxzPlBejFSlw",
+    "api-token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3Mjg2NDQzMTcsImV4cCI6MTcyODY1MTUxN30.a26Y2qtG7kinqU-FaJCCdzGaW8588QHvrOVI_9BQHoo",
     "authorization": "hotpot-t2mJbCr8292aQzp8CnEPaK",
-    "content-type": "multipart/form-data; boundary=----WebKitFormBoundaryTUU6orzaKMm9dlm0",
-    "sec-ch-ua": "\"Microsoft Edge\";v=\"129\", \"Not=A?Brand\";v=\"8\", \"Chromium\";v=\"129\"",
+    "content-type": "multipart/form-data; boundary=----WebKitFormBoundaryxKNU8LidskAlQ7A7",
+    "sec-ch-ua": "\"Chromium\";v=\"130\", \"Microsoft Edge\";v=\"130\", \"Not?A_Brand\";v=\"99\"",
     "sec-ch-ua-mobile": "?1",
     "sec-ch-ua-platform": "\"Android\"",
     "sec-fetch-dest": "empty",
@@ -154,9 +154,29 @@ const generateImage = async (req, res) => {
     "Referer": "https://hotpot.ai/",
     "Referrer-Policy": "strict-origin-when-cross-origin"
   },
-  "body": `------WebKitFormBoundaryTUU6orzaKMm9dlm0\r\nContent-Disposition: form-data; name=\"seedValue\"\r\n\r\nnull\r\n------WebKitFormBoundaryTUU6orzaKMm9dlm0\r\nContent-Disposition: form-data; name=\"inputText\"\r\n\r\n${searchText}\r\n------WebKitFormBoundaryTUU6orzaKMm9dlm0\r\nContent-Disposition: form-data; name=\"width\"\r\n\r\n512\r\n------WebKitFormBoundaryTUU6orzaKMm9dlm0\r\nContent-Disposition: form-data; name=\"height\"\r\n\r\n512\r\n------WebKitFormBoundaryTUU6orzaKMm9dlm0\r\nContent-Disposition: form-data; name=\"styleId\"\r\n\r\n49\r\n------WebKitFormBoundaryTUU6orzaKMm9dlm0\r\nContent-Disposition: form-data; name=\"styleLabel\"\r\n\r\nPhoto General 1\r\n------WebKitFormBoundaryTUU6orzaKMm9dlm0\r\nContent-Disposition: form-data; name=\"isPrivate\"\r\n\r\nfalse\r\n------WebKitFormBoundaryTUU6orzaKMm9dlm0\r\nContent-Disposition: form-data; name=\"price\"\r\n\r\n0\r\n------WebKitFormBoundaryTUU6orzaKMm9dlm0\r\nContent-Disposition: form-data; name=\"requestId\"\r\n\r\n8-POZQJNoiPzNFqf9\r\n------WebKitFormBoundaryTUU6orzaKMm9dlm0\r\nContent-Disposition: form-data; name=\"resultUrl\"\r\n\r\nhttps://hotpotmedia.s3.us-east-2.amazonaws.com/8-POZQJNoiPzNFqf9.png\r\n------WebKitFormBoundaryTUU6orzaKMm9dlm0--\r\n`,
+  "body": `------WebKitFormBoundaryxKNU8LidskAlQ7A7\r\nContent-Disposition: form-data; name=\"seedValue\"\r\n\r\nnull\r\n------WebKitFormBoundaryxKNU8LidskAlQ7A7\r\nContent-Disposition: form-data; name=\"inputText\"\r\n\r\n${searchText}\r\n------WebKitFormBoundaryxKNU8LidskAlQ7A7\r\nContent-Disposition: form-data; name=\"width\"\r\n\r\n512\r\n------WebKitFormBoundaryxKNU8LidskAlQ7A7\r\nContent-Disposition: form-data; name=\"height\"\r\n\r\n512\r\n------WebKitFormBoundaryxKNU8LidskAlQ7A7\r\nContent-Disposition: form-data; name=\"styleId\"\r\n\r\n49\r\n------WebKitFormBoundaryxKNU8LidskAlQ7A7\r\nContent-Disposition: form-data; name=\"styleLabel\"\r\n\r\nPhoto General 1\r\n------WebKitFormBoundaryxKNU8LidskAlQ7A7\r\nContent-Disposition: form-data; name=\"isPrivate\"\r\n\r\nfalse\r\n------WebKitFormBoundaryxKNU8LidskAlQ7A7\r\nContent-Disposition: form-data; name=\"price\"\r\n\r\n0\r\n------WebKitFormBoundaryxKNU8LidskAlQ7A7\r\nContent-Disposition: form-data; name=\"requestId\"\r\n\r\n8-iXc1WSectgiqlks\r\n------WebKitFormBoundaryxKNU8LidskAlQ7A7\r\nContent-Disposition: form-data; name=\"resultUrl\"\r\n\r\nhttps://hotpotmedia.s3.us-east-2.amazonaws.com/8-iXc1WSectgiqlks.png\r\n------WebKitFormBoundaryxKNU8LidskAlQ7A7--\r\n`,
   "method": "POST"
 });
+
+//    fetch("https://api.hotpot.ai/art-maker-sdte-zmjbcrr", {
+//   "headers": {
+//     "accept": "*/*",
+//     "accept-language": "en-US,en;q=0.9,hi;q=0.8",
+//     "api-token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MjU3Mjk1NDAsImV4cCI6MTcyNTczNjc0MH0.CS0sa2FCz-cFSb4H0N0_DEllfItC9XYQxzPlBejFSlw",
+//     "authorization": "hotpot-t2mJbCr8292aQzp8CnEPaK",
+//     "content-type": "multipart/form-data; boundary=----WebKitFormBoundaryTUU6orzaKMm9dlm0",
+//     "sec-ch-ua": "\"Microsoft Edge\";v=\"129\", \"Not=A?Brand\";v=\"8\", \"Chromium\";v=\"129\"",
+//     "sec-ch-ua-mobile": "?1",
+//     "sec-ch-ua-platform": "\"Android\"",
+//     "sec-fetch-dest": "empty",
+//     "sec-fetch-mode": "cors",
+//     "sec-fetch-site": "same-site",
+//     "Referer": "https://hotpot.ai/",
+//     "Referrer-Policy": "strict-origin-when-cross-origin"
+//   },
+//   "body": `------WebKitFormBoundaryTUU6orzaKMm9dlm0\r\nContent-Disposition: form-data; name=\"seedValue\"\r\n\r\nnull\r\n------WebKitFormBoundaryTUU6orzaKMm9dlm0\r\nContent-Disposition: form-data; name=\"inputText\"\r\n\r\n${searchText}\r\n------WebKitFormBoundaryTUU6orzaKMm9dlm0\r\nContent-Disposition: form-data; name=\"width\"\r\n\r\n512\r\n------WebKitFormBoundaryTUU6orzaKMm9dlm0\r\nContent-Disposition: form-data; name=\"height\"\r\n\r\n512\r\n------WebKitFormBoundaryTUU6orzaKMm9dlm0\r\nContent-Disposition: form-data; name=\"styleId\"\r\n\r\n49\r\n------WebKitFormBoundaryTUU6orzaKMm9dlm0\r\nContent-Disposition: form-data; name=\"styleLabel\"\r\n\r\nPhoto General 1\r\n------WebKitFormBoundaryTUU6orzaKMm9dlm0\r\nContent-Disposition: form-data; name=\"isPrivate\"\r\n\r\nfalse\r\n------WebKitFormBoundaryTUU6orzaKMm9dlm0\r\nContent-Disposition: form-data; name=\"price\"\r\n\r\n0\r\n------WebKitFormBoundaryTUU6orzaKMm9dlm0\r\nContent-Disposition: form-data; name=\"requestId\"\r\n\r\n8-POZQJNoiPzNFqf9\r\n------WebKitFormBoundaryTUU6orzaKMm9dlm0\r\nContent-Disposition: form-data; name=\"resultUrl\"\r\n\r\nhttps://hotpotmedia.s3.us-east-2.amazonaws.com/8-POZQJNoiPzNFqf9.png\r\n------WebKitFormBoundaryTUU6orzaKMm9dlm0--\r\n`,
+//   "method": "POST"
+// });
       
       
       
